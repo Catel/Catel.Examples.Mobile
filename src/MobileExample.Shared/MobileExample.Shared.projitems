@@ -9,14 +9,20 @@
     <Import_RootNamespace>MobileExample</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)ModuleInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppInitializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Feature.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Properties\SolutionAssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FeatureService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\Interfaces\IFeatureService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AuditingViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BindingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CommandsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FeatureListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\NavigationViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\WelcomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Extensions\" />
     <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Services\Interfaces\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
   </ItemGroup>
 </Project>
