@@ -11,7 +11,8 @@
     <RootNamespace>MobileExample</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>MobileExample</AssemblyName>
-    <NuGetPackageImportStamp>8a419e03</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -106,13 +107,15 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Catel.Core">
-      <HintPath>..\..\lib\Catel.Core.3.9.0.1405101538-beta\lib\MonoTouch\Catel.Core.dll</HintPath>
+      <HintPath>..\..\lib\Catel.Core.4.1.0\lib\MonoTouch\Catel.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Catel.Fody.Attributes">
       <HintPath>..\..\lib\Catel.Fody.2.0.0\lib\portable-net4+sl4+wp7+win8+wpa81+MonoAndroid14+MonoTouch40\Catel.Fody.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Catel.MVVM">
-      <HintPath>..\..\lib\Catel.MVVM.3.9.0.1405101538-beta\lib\MonoTouch\Catel.MVVM.dll</HintPath>
+      <HintPath>..\..\lib\Catel.MVVM.4.1.0\lib\MonoTouch\Catel.MVVM.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -123,11 +126,11 @@
   <Import Project="..\MobileExample.Shared\MobileExample.Shared.projitems" Label="Shared" Condition="Exists('..\MobileExample.Shared\MobileExample.Shared.projitems')" />
   <Import Project="..\MobileExample.Shared\MobileExample.Shared.projitems" Label="Shared" Condition="Exists('..\MobileExample.Shared\MobileExample.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <Import Project="..\..\lib\Fody.1.24.0-beta3\build\Fody.targets" Condition="Exists('..\..\lib\Fody.1.24.0-beta3\build\Fody.targets')" />
+  <Import Project="..\..\lib\Fody.1.29.3\build\dotnet\Fody.targets" Condition="Exists('..\..\lib\Fody.1.29.3\build\dotnet\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\lib\Fody.1.24.0-beta3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\lib\Fody.1.24.0-beta3\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\..\lib\Fody.1.29.3\build\dotnet\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\lib\Fody.1.29.3\build\dotnet\Fody.targets'))" />
   </Target>
 </Project>
